@@ -1,0 +1,14 @@
+plugins { id 'com.android.application' version '8.11.1' }
+android {
+ namespace 'com.fluid.glance'
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+ compileSdk 36
+ buildToolsVersion "35.0.0"
+ if (project.hasProperty("unsignedDebug")) buildTypes.debug.signingConfig = null
+ defaultConfig { applicationId 'com.fluid.glance'; minSdk 30; targetSdk 35; versionCode 1; versionName '1.0' }
+}
+dependencies { implementation 'androidx.core:core:1.17.0'; implementation 'androidx.wear.tiles:tiles:1.6.2'; implementation 'androidx.wear.protolayout:protolayout:1.4.2'; implementation 'androidx.concurrent:concurrent-futures:1.3.0' }
+
+
+
+
